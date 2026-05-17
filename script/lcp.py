@@ -4,6 +4,19 @@ import base64
 import sys
 import os
 
+def send(text):
+    p = subprocess.Popen(
+        ['xclip', '-selection', 'clipboard'],
+        stdin=subprocess.PIPE
+    )
+    p.communicate(input=text.encode())
+
+    subprocess.run([
+        'xdotool',
+        'key',
+        '--clearmodifiers',
+        'ctrl+shift+v'
+    ])
 
 if len(sys.argv) != 2:
     print(f"Usage: python3 {sys.argv[0]} <file>")
@@ -32,20 +45,10 @@ for i in range(5, 0, -1):
 
 print("Starting...")
 
+send(f"\n")
+time.sleep(3)
 
-def send(text):
-    p = subprocess.Popen(
-        ['xclip', '-selection', 'clipboard'],
-        stdin=subprocess.PIPE
-    )
-    p.communicate(input=text.encode())
 
-    subprocess.run([
-        'xdotool',
-        'key',
-        '--clearmodifiers',
-        'ctrl+shift+v'
-    ])
 
 
 b64_file = file_name + ".b64"
@@ -68,5 +71,7 @@ for i, part in enumerate(parts):
 send(f"\nbase64 -d {b64_file} > {file_name}\n")
 time.sleep(0.5)
 send(f"rm {b64_file}\n")
+time.sleep(0.5)
+send(f"echo \"DONE\"\n")
 
 print("DONE")
