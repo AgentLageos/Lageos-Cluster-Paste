@@ -42,7 +42,7 @@ python lcp.py <path/to/file>
 ```
 
 
-5. quickly switch to open VNC window.
+5. quickly switch to open VNC window AND (VERY IMPORTANT) left-click
 
 6. Wait for finish.
 
@@ -51,6 +51,7 @@ python lcp.py <path/to/file>
 ## IMPORTANT
 
 -Made for X11, might not work with Wayland.
+
 -Stay inside VNC-Window while copying, otherwise file transfer will be interrupted.
 
 -When starting the script a "Remote Control"-Window might appear asking for permission. Just quickly press ok.
