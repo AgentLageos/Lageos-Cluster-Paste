@@ -12,18 +12,21 @@ Currently Liunx only.
 ### Fedora
 ```bash	        
 sudo dnf install xclip xdotool
+```
 ### Debian/Ubuntu 
 ```bash	        
 sudo apt install xclip xdotool
+```
 ### Arch
 ```bash	        
 sudo pacman -S xclip xdotool
-
+```
 
 
 clone repo: 
 ```bash
-git clone https://github.com/AgentLageos/Lageos-Cluster-Paste.git	        
+git clone https://github.com/AgentLageos/Lageos-Cluster-Paste.git
+```	        
 
 ## Usage 
 
@@ -36,6 +39,7 @@ git clone https://github.com/AgentLageos/Lageos-Cluster-Paste.git
 ```bash
 cd Lageos-Cluster-Paste/script
 python lcp.py <path/to/file>
+```
 
 
 5. quickly switch to open VNC window.
@@ -51,6 +55,7 @@ python lcp.py <path/to/file>
 
 -When starting the script a "Remote Control"-Window might appear asking for permission. Just quickly press ok.
 If you where too slow pressing ok, you need to re-run, since the script won't wait for you to grant permission and won't check if the file was copied over completely.
+However it will only ask you once for permission.
 
 
 
