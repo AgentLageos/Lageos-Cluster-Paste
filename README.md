@@ -1,6 +1,6 @@
 # Lageos-Cluster-Paste
 Paste (one) large file into restricted VNC-Connections that only allow to paste strings with less than 1000 characters. 
-Currently Liunx only.
+Currently Linux only.
 
 
 ## INSTALLATION ##
