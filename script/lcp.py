@@ -51,7 +51,8 @@ time.sleep(3)
 
 
 
-b64_file = file_name + ".b64"
+b64_file = os.path.basename(file_name) + ".b64"
+
 
 # create file
 send(f"> {b64_file}\n")
@@ -68,7 +69,7 @@ for i, part in enumerate(parts):
     time.sleep(0.4)
 
 # decode in cluster
-send(f"\nbase64 -d {b64_file} > {file_name}\n")
+send(f"\nbase64 -d {b64_file} > {os.path.basename(file_name)}\n")
 time.sleep(0.5)
 send(f"rm {b64_file}\n")
 time.sleep(0.5)
